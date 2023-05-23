@@ -1,0 +1,36 @@
+.container {
+    border: 1px greenyellow; /*color del borde*/
+    background-image: url(https://w0.peakpx.com/wallpaper/544/865/HD-wallpaper-the-celestial-plateau-stars-planets-moons-space.jpg); /*color del fondo*/
+    border-radius: 10px; /*borde más redondeado*/
+    width: 700px; /*achicar el ancho de las tarjetitas*/
+    padding: 10px;
+    height: 450px;
+    box-shadow: 0 0 20px lightblue; /*sombra que queda detrás*/
+    color: white;
+    
+    
+}
+.container h1 {
+    background-color: black;
+    width: 400px;
+    display:inline-block;
+    justify-content:center;
+    
+
+}
+.container h2 {
+    background-color: black;
+    width: 600px;
+    align-content: center;
+    height: 130px
+    
+    
+}
+.container p {
+    background-color: rgba(red, green, blue, alpha);
+    align-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+

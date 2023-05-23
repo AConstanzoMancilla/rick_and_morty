@@ -1,0 +1,27 @@
+.container {
+    margin: auto;
+    width: 50%;
+    height: 150px;
+    margin-top: 10px; 
+    background-image: url(https://img.lovepik.com/free-png/20210919/lovepik-starry-sky-png-image_400280663_wh1200.png);
+    
+}
+.container input {
+    border-radius: 5px; 
+    height: 40px;
+    width: 250px;
+    font-size: 20px;
+    display:inline-block;
+    justify-content:center;
+}
+.container button {
+    border-radius: 5px; 
+    height: 40px;
+    background-color: rgb(179, 245, 208);
+    color: black; 
+    font-size: 20px;
+    display:inline-block;
+    justify-content:center;
+    
+
+}

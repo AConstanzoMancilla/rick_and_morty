@@ -1,0 +1,14 @@
+.container {
+    border: 1px greenyellow; /*color del borde*/
+    background-image: url(https://previews.123rf.com/images/krinichnaya/krinichnaya1706/krinichnaya170600250/80445581-galaxia-brillante-el-extracto-chispea-en-el-fondo-blanco-textura-del-fractal-de-la-fantas%C3%ADa-en.jpg); /*color del fondo*/
+    border-radius: 10px; /*borde más redondeado*/
+    width: 1200px; /*achicar el ancho de las tarjetitas*/
+    padding: 10px;
+    height: 800px;
+    box-shadow: 0 0 20px lightblue; /*sombra que queda detrás*/
+    
+    
+}
+.image {
+    width: 450px;
+}

@@ -1,0 +1,45 @@
+.container {
+    border: 1px greenyellow; /*color del borde*/
+    background-image: url(https://e1.pxfuel.com/desktop-wallpaper/883/94/desktop-wallpaper-black-space.jpg); /*color del fondo*/
+    border-radius: 10px; /*borde más redondeado*/
+    width: 500px; /*achicar el ancho de las tarjetitas*/
+    padding: 10px;
+    box-shadow: 0 0 20px lightblue; /*sombra que queda detrás*/
+}
+
+.image {
+    width: 450px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end; /*botón a la derecha*/
+}
+.buttonContainer button {
+    background-color: salmon;
+    color: white;
+    border: 0px;
+    border-radius:2px; 
+}
+.dataContainer {
+    text-align: center;
+    padding: 10px; 
+}
+.dataContainer h2 {
+    margin: 2px;
+    font-size: 17px; 
+    color: white;
+    background: rgba(128, 128, 128, .85);
+    width: 300px; 
+    display:inline-block;
+    justify-content:center;
+}
+.dataContainer2 h2 {
+    margin: 2px;
+    font-size: 17px; 
+    color: rgb(255, 255, 255);
+    background: rgba(10, 237, 222, 0.915);
+    width: 180px;
+    display:inline-block;
+    justify-content: flex-end;
+}
