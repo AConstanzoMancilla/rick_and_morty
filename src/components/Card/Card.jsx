@@ -1,9 +1,43 @@
 import styles from './Card.module.css';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addFavorites, deleteFavorites } from '../../redux/actions';
+import { useState, useEffect } from 'react';
 
-export default function Card({  id, name, species, gender, image, onClose, status, origin }) { //las props SIEMPRE son un objeto. Acá hacemos un destructuring de todo lo que utilizaré
+function Card({  id, name, species, gender, image, onClose, status, origin, addFavorites, deleteFavorites, myFavorites }) { //las props SIEMPRE son un objeto. Acá hacemos un destructuring de todo lo que utilizaré
+   
+   const [isFav, setIsFav] = useState(false);
+
+   const handleFavorite = () => {
+      if(isFav){
+         setIsFav(false);
+         deleteFavorites(id);
+      }
+      else {
+         setIsFav(true);
+         addFavorites({id, name, species, gender, image, status, origin})
+      }
+   }
+   useEffect(() => {
+      myFavorites.forEach((favorite) => {
+         if (favorite.id === id) {
+            setIsFav(true);
+         }
+      });
+   }, [myFavorites]);
+    
+   
    return (
       <div className={styles.container}>
+         {
+            isFav 
+            ? (
+               <button onClick={handleFavorite}>❤️</button>
+            ) : (
+               <button onClick={handleFavorite}>🤍</button>
+            )
+         }
+         
          <div className={styles.buttonContainer}>
             <button onClick={() => onClose(id)}>X</button>
          </div>
@@ -25,3 +59,22 @@ export default function Card({  id, name, species, gender, image, onClose, statu
       </div>
    );
 }  
+
+
+const mapStateToProps = (state) => {
+   return {
+       myFavorites: state.myFavorites
+   }
+
+}
+const mapDispatchToProps = (dispatch) => {
+   return {
+      addFavorites: (character) => dispatch(addFavorites(character)),
+      deleteFavorites: (id) => dispatch(deleteFavorites(id))
+   }
+   
+}
+export default connect(
+   mapStateToProps,
+   mapDispatchToProps
+)(Card);

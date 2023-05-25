@@ -7,6 +7,11 @@
     height: 450px;
     box-shadow: 0 0 20px lightblue; /*sombra que queda detrás*/
     color: white;
+    justify-content: center;
+    margin:auto;
+    text-align:center;
+    margin-top: 5px;
+
     
     
 }
