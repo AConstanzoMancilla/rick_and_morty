@@ -28,11 +28,11 @@ const Form = ({ login }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor='username'>Username:</label>
+            <label style={{ color:'white'}} htmlFor='username'>Username:</label>
             <input type="text" name='username' value={userData.username} onChange={handleChange}/>
             {errors.username && <p style={{ color: 'white'}}>{errors.username}</p>}
             <hr/>
-            <label htmlFor='password'>Password:</label>
+            <label style={{ color:'white'}} htmlFor='password'>Password:</label>
             <input type="text" name='password' value={userData.password} onChange={handleChange}/>
             {errors.password && <p style={{ color: 'white'}}>{errors.password}</p>}
             
