@@ -2,7 +2,7 @@ import Card from "../Card/Card";
 
 export default function Cards({ characters, onClose }) {
    return (
-   <div style={{display: 'flex', justifyContent: 'space-between' }}>
+   <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
       {characters.map(({ id, name, status, species, gender, image, origin }) => {  //no se puede utilizar forEach porque no retorna nada, solo recorre. 
          return (
             <Card
